@@ -1,0 +1,2 @@
+Hello {{user.username}}, Welcome to Norah's Blog.
+You have joined receive blog notifications

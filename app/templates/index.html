@@ -4,5 +4,41 @@
     <h1>Personal Blog</h1>
     <p>My Space,Thoughts and Reminders</p>
 </div>
-    
+<h1></h1>
+
+<div class="container-fluid">
+    <div class="row">
+            {% if blog %}
+                {% for blog in blog %}
+                <div class="col-md-4 " >
+                    <div class="thumbnail h-50" id="carded">
+                        <h5 class="card-header">Title: <span>{{blog.title}} </span></h5>
+              <a href=""></a>
+                        <div class="card-body">
+                                <p>blog: <span>{{blog.blog}}</span></p>
+                                <p class=""> Category: <span>{{blog.category}}</span> </p>
+ 
+                           
+                            <div class="comment">
+                                <a href="{{url_for('main.delete_post',blog_id = blog.id)}}" class="btn btn-sm"> Delete</a>
+                               <a href="{{url_for('main.comment',blog_id = blog.id)}}" class="btn btn-sm"> Comment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% endfor %}
+            {% else %}
+            <div class="card w-90 mb-3">
+                <div class="card-body">
+            
+                    <p class="card-title">Pitch Has 0 posts</p>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+</div>
+
+   
+
 {% endblock%}
