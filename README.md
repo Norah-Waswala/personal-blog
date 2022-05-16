@@ -1,6 +1,8 @@
 # personal-blog
 ## Author
 Norah Waswala
+## Project Description
+A personal blogging website where you can create and share your opinions and other users can read and comment on them. Additionally, add a feature that displays random quotes to inspire users. 
 ## User Story
 * As a user, I would like to view the blog posts on the site
 * As a user, I would like to comment on blog posts
@@ -21,26 +23,31 @@ Norah Waswala
 | Select comment button | **Comment** | Form that you input your comment|
 | Click on submit |  | Redirect to all comments tamplate with your comment and other comments|
 |Subscription | **Email Address**| Flash message "Succesfully subsbribed to D-Blog"|
-
-## Development Installation
-* Clone the repository at https://github.com/Norah-Waswala/personal-blog.git
-* Move to the folder and install requirements
+## Requirements
+The application requires the following installations to operate:
+* SQL database
+* pyperclip
+* pip
+* flask
+### Technologies Used
+* Python3.8
+* Flask
+* Heroku
+### Project Setup Instructions
+* Open Terminal {Ctrl+Alt+T}
+* Fork the repository
+* Git clone https://github.com/Norah-Waswala/personal-blog.git
+* code . or atom . depending on the text editor of your choice
+* * Move to the folder and install requirements
 * cd personal-blog
 * pip install -r requirements.txt
 * Exporting Configurations
 * export SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://{User Name}:{password}@localhost/{database name}
-### Running the application
-* python manage.py server
-* Testing the application
-* python manage.py test
-* Open the application on your browser 127.0.0.1:5000.
+## Support and contact details
+For more information, find me at my email (https://norah.waswala15@gmail.com)
 
-## Technology used
-* Python3.8
-* Flask
-* Heroku
-## Contact Information
+## link to live site on heroku pages
 
-## License
-[MIT] License:
-Copyright (c)  2020 Norah Waswala
+## License and copyright information
+[MIT LICENSE](LICENSE)
+Copyright (C) [2022] [@ Norah-Waswala]
