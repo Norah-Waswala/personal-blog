@@ -1,7 +1,7 @@
 from flask import render_template,redirect,url_for,abort,request,flash
 from app.main import main
 from app.models import User,Blog,Comment,Subscriber
-from .forms import UpdateProfile,CreateBlog
+from .forms import UpdateProfile,CreateBlog,ChangeProfile
 from .. import db
 from app.requests import get_quotes
 from flask_login import login_required,current_user
@@ -68,7 +68,27 @@ def delete_post(blog_id):
 @main.route('/user/<string:username>')
 def user_posts(username):
     user = User.query.filter_by(username=username).first()
-    page = request.args.get('page',1, type = int )
-    blogs = Blog.query.filter_by(user=user).order_by(Blog.posted.desc()).paginate(page = page, per_page = 4)
-    return render_template('userposts.html',blogs=blogs,user = user)
+    
+    blogs = Blog.query.filter_by(user=user).order_by(Blog.posted.desc())
+    if user is None:
+        abort(404)
+    return render_template('profile/profile.html',blogs=blogs,user = user)
 
+@main.route('/user/<uname>/update',methods = ['GET','POST'])
+@login_required
+def update_profile(username):
+    user = User.query.filter_by(username = username).first()
+    if user is None:
+        abort(404)
+
+    form = ChangeProfile()
+
+    if form.validate_on_submit():
+        user.bio = form.bio.data
+
+        db.session.add(user)
+        db.session.commit()
+
+        return redirect(url_for('.profile',uname=user.username))
+
+    return render_template('profile/update.html',form =form)

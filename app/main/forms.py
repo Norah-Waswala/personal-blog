@@ -28,3 +28,7 @@ class UpdateProfile(FlaskForm):
         if username.data != current_user.username:
             if User.query.filter_by(username = username.data).first():
                 raise ValidationError("The username has already been taken")
+
+class ChangeProfile(FlaskForm):
+    bio = TextAreaField('Tell us about you.',validators = [DataRequired()])
+    submit = SubmitField('Submit')                
