@@ -4,7 +4,7 @@ Norah Waswala
 ## Project Description
 A personal blogging website where you can create and share your opinions and other users can read and comment on them. Additionally, add a feature that displays random quotes to inspire users.
 ## Demo
-![screen](/app/static/image/back.jpeg)
+![screen](/app/static/image/screen.png)
 ## User Story
 * As a user, I would like to view the blog posts on the site
 * As a user, I would like to comment on blog posts
@@ -49,7 +49,7 @@ The application requires the following installations to operate:
 For more information, find me at my email (https://norah.waswala15@gmail.com)
 
 ## link to live site on heroku pages
-
+https://blog-norah.herokuapp.com/
 ## License and copyright information
 [MIT LICENSE](LICENSE)
 Copyright (C) [2022] [@ Norah-Waswala]
