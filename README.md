@@ -2,7 +2,9 @@
 ## Author
 Norah Waswala
 ## Project Description
-A personal blogging website where you can create and share your opinions and other users can read and comment on them. Additionally, add a feature that displays random quotes to inspire users. 
+A personal blogging website where you can create and share your opinions and other users can read and comment on them. Additionally, add a feature that displays random quotes to inspire users.
+## Demo
+![screen](/app/static/image/back.jpeg)
 ## User Story
 * As a user, I would like to view the blog posts on the site
 * As a user, I would like to comment on blog posts
