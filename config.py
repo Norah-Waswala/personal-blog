@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://norah:1234we@localhost/blog'
+    
    
     SECRET_KEY = os.environ.get('SECRET_KEY')
     
@@ -14,10 +14,11 @@ class Config:
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
 class ProdConfig(Config):
-    pass
+    SQLALCHEMY_DATABASE_URI="postgres://heesvoedbpsfod:2016c6fb2c9ccd1886cd0f4a0712e889a1ad0c0914d8e0f93c21e735978ebc21@ec2-52-86-56-90.compute-1.amazonaws.com:5432/dapbi750074o22"
 
 
 class DevConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://norah:1234we@localhost/blog'
     DEBUG = True
 
 config_options = {
