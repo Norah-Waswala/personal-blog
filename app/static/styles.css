@@ -1,11 +1,11 @@
 *{
     font-family: 'Josefin Sans', sans-serif;
-    font-size: xx-large;
+    font-size: x-large;
    
 }
 body{
     background-image: url(../static/image/back2.jpeg);
-    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     
     
